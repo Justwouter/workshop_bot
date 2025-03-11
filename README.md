@@ -3,7 +3,9 @@ Welcome to the Acrobot Workshop bot
 This is a small version of the [Acrobot](https://Acrobot.nl), a simple but expressive robot acrobat with 4 joints. It is easy to animate by using [Bottango](https://www.bottango.com/).
 
 The project was developed by [Daniel Simu](https://danielsimu.com), with funding and support from [Creative Coding Utrecht](https://creativecodingutrecht.nl/).
-Additional materials were sponsored by [DFRobot](https://www.dfrobot.com/) and [Fillamentum](https://fillamentum.com/)
+Additional materials were sponsored by [DFRobot](https://www.dfrobot.com/),  [Fillamentum](https://fillamentum.com/) and [Tinytronics](https://www.tinytronics.nl/en/)
+
+https://github.com/hapiel/workshop_bot/raw/refs/heads/main/media/acrobot_workshop_walk_by.MP4
 
 # Required materials
 
