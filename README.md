@@ -3,7 +3,11 @@ Welcome to the Acrobot Workshop bot
 This is a small version of the [Acrobot](https://Acrobot.nl), a simple but expressive robot acrobat with 4 joints. It is easy to animate by using [Bottango](https://www.bottango.com/).
 
 The project was developed by [Daniel Simu](https://danielsimu.com), with funding and support from [Creative Coding Utrecht](https://creativecodingutrecht.nl/).
-Additional materials were sponsored by [DFRobot](https://www.dfrobot.com/) and [Fillamentum](https://fillamentum.com/)
+Additional materials were sponsored by [DFRobot](https://www.dfrobot.com/),  [Fillamentum](https://fillamentum.com/) and [Tinytronics](https://www.tinytronics.nl/en/)
+
+
+https://github.com/user-attachments/assets/73727a5c-0673-4feb-aae7-0f7d92c28b94
+
 
 # Required materials
 
@@ -13,6 +17,8 @@ For a workshop you need 3 things:
 - Computer with Bottango software
   
 Typically 2 - 3 participants can use 1 robot kit.
+
+![IMG_4038](https://github.com/user-attachments/assets/ae3391e6-fa6f-4484-9b10-7a14f886f91a)
 
 ## Bottango
 
@@ -35,12 +41,11 @@ Make sure to update the child code with the mac address of the parent, and in Bo
 - You can solder the electronics together on a perfboard, or fabricate the pcb.
 - You will need 2 small screws to hold the ESP(2x6mm works well), and 3 M3 nuts and M3x30mm bolts to close the case.
 
+![IMG_3868](https://github.com/user-attachments/assets/abd38016-ecba-4983-9508-b4a0b231a236)
 
 # Todo
 
-- Add pictures
 - Write detailed instructions about how to fabricate and assemble the motors
-- Write detailed BOM
 - Write workshop instructions
 - Improve robot design
 
