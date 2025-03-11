@@ -29,11 +29,11 @@ Make sure to update the child code with the mac address of the parent, and in Bo
 - The body consists of 2 3d printed halves, in PLA
 - The shoulders, hips, hands and feet are best printed of TPU98A from [Fillamentum](https://fillamentum.com/)
 - The motors are ideally 6Kg 300° Clutch Servos from [DFRobot](https://www.dfrobot.com/) 
-- The ideal ESP32 for the robot is this [TTGO-T18](https://github.com/LilyGO/TTGO-T-Cell), which comes with a battery holder and a button. 
+- The ideal ESP32 for the robot is this [TTGO-T18](https://github.com/LilyGO/TTGO-T-Cell), which comes with a battery holder and a button. You can get these from [Tinytronics](https://www.tinytronics.nl/en/development-boards/microcontroller-boards/with-wi-fi/lilygo-ttgo-t-cell-esp32-with-3-way-button-and-18650-battery-holder)
   - I recommend squeezing a protected 18650 cell into the battery holder, the holder terminals may need to be bent to fit this.
 - The dongle can be any standard ESP32, I use a Pico-d4 with a usb plug connector mounted on it.
 - You can solder the electronics together on a perfboard, or fabricate the pcb.
-- You will need some screws, nuts and bolts to close the case and attach the components.
+- You will need 2 small screws to hold the ESP(2x6mm works well), and 3 M3 nuts and M3x30mm bolts to close the case.
 
 
 # Todo
