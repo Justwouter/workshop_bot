@@ -1,8 +1,8 @@
 ﻿{
   "$id": "1",
   "$type": "ProjectHolder, Assembly-CSharp",
-  "saveVersion": "11",
-  "bottangoVersion": "0.7.0p1",
+  "saveVersion": "12",
+  "bottangoVersion": "0.7.0a1",
   "importedModels": {
     "$id": "2",
     "$type": "System.Collections.Generic.List`1[[CustomModelMedia, Assembly-CSharp]], mscorlib",
@@ -83,7 +83,7 @@
           "serializedMotorHardwareConfiguration": {
             "$id": "9",
             "$type": "SerializedPinServoHardwareConfiguration, Assembly-CSharp",
-            "Pin": 12,
+            "Pin": 25,
             "MinPwm": 2400,
             "MaxPwm": 549,
             "MaxSpeed": 3000
@@ -219,7 +219,7 @@
           "serializedMotorHardwareConfiguration": {
             "$id": "17",
             "$type": "SerializedPinServoHardwareConfiguration, Assembly-CSharp",
-            "Pin": 27,
+            "Pin": 26,
             "MinPwm": 550,
             "MaxPwm": 2400,
             "MaxSpeed": 3000
@@ -355,7 +355,7 @@
           "serializedMotorHardwareConfiguration": {
             "$id": "25",
             "$type": "SerializedPinServoHardwareConfiguration, Assembly-CSharp",
-            "Pin": 25,
+            "Pin": 12,
             "MinPwm": 2400,
             "MaxPwm": 550,
             "MaxSpeed": 3000
@@ -491,7 +491,7 @@
           "serializedMotorHardwareConfiguration": {
             "$id": "33",
             "$type": "SerializedPinServoHardwareConfiguration, Assembly-CSharp",
-            "Pin": 26,
+            "Pin": 27,
             "MinPwm": 550,
             "MaxPwm": 2400,
             "MaxSpeed": 3000
@@ -1291,7 +1291,7 @@
                     "animationTrack": {
                       "$ref": "81"
                     },
-                    "Movement": 0.766666651,
+                    "Movement": 0.7758621,
                     "HandleType": "AutoSmooth",
                     "InTangent": {
                       "$id": "85",
@@ -1339,7 +1339,7 @@
                     "animationTrack": {
                       "$ref": "87"
                     },
-                    "Movement": 0.766666651,
+                    "Movement": 0.7758621,
                     "HandleType": "AutoSmooth",
                     "InTangent": {
                       "$id": "91",
@@ -1398,7 +1398,7 @@
                     "OutTangent": {
                       "$id": "98",
                       "$type": "BotTangoSerial.Point, Assembly-CSharp",
-                      "X": 750,
+                      "X": 1000,
                       "Y": 0.0
                     },
                     "Frame": 0
@@ -2588,7 +2588,7 @@
                     "animationTrack": {
                       "$ref": "247"
                     },
-                    "Movement": 0.5,
+                    "Movement": 0.497057,
                     "HandleType": "AutoSmooth",
                     "InTangent": {
                       "$id": "251",
@@ -3008,14 +3008,37 @@
           "$values": []
         },
         "DurationInMS": 20000
+      },
+      {
+        "$id": "305",
+        "$type": "TonicNorth.Bottango.Articulation.BotAnimationClip, Assembly-CSharp",
+        "FPS": 30,
+        "durationInFrames": 600,
+        "name": "New Animation",
+        "loop": false,
+        "workAreaStart": 0,
+        "workAreaEnd": 600,
+        "recordAreaStart": 0,
+        "recordAreaEnd": 600,
+        "animationTracks": {
+          "$id": "306",
+          "$type": "System.Collections.Generic.List`1[[TonicNorth.Bottango.Articulation.BotAnimationTrack, Assembly-CSharp]], mscorlib",
+          "$values": []
+        },
+        "markers": {
+          "$id": "307",
+          "$type": "System.Collections.Generic.List`1[[AnimationMarker, Assembly-CSharp]], mscorlib",
+          "$values": []
+        },
+        "DurationInMS": 20000
       }
     ]
   },
   "projectDefaults": {
-    "$id": "305",
+    "$id": "308",
     "$type": "ProjectDefaults+Defaults, Assembly-CSharp",
     "colorPresets": {
-      "$id": "306",
+      "$id": "309",
       "$type": "System.Collections.Generic.List`1[[UnityEngine.Color, UnityEngine.CoreModule]], mscorlib",
       "$values": [
         {
@@ -3048,7 +3071,7 @@
     "lastExportedConfig": null,
     "apiPort": 59224,
     "ltcSettings": {
-      "$id": "307",
+      "$id": "310",
       "$type": "LTCSettings, Assembly-CSharp",
       "lastDeviceName": "",
       "frameRate": "FPS_30_00",
@@ -3060,7 +3083,7 @@
       "jogWiggle": 500
     },
     "defaultClips": {
-      "$id": "308",
+      "$id": "311",
       "$type": "System.Collections.Generic.List`1[[TonicNorth.Bottango.Articulation.BotAnimationClip, Assembly-CSharp]], mscorlib",
       "$values": []
     },
@@ -3080,23 +3103,23 @@
     }
   },
   "serialControllerMetaDatas": {
-    "$id": "309",
+    "$id": "312",
     "$type": "System.Collections.Generic.List`1[[SerialControllerMetaData, Assembly-CSharp]], mscorlib",
     "$values": [
       {
-        "$id": "310",
+        "$id": "313",
         "$type": "SerialControllerMetaData, Assembly-CSharp",
-        "Name": "SerialDriver",
+        "Name": "SerialDriver-dongle",
         "communicationType": "Serial",
         "communicationTypeMetaData": {
-          "$id": "311",
+          "$id": "314",
           "$type": "SerialCommunicationType_USBSerial_MetaData, Assembly-CSharp",
           "SearchQuery": "",
-          "SearchExactPath": "COM7",
+          "SearchExactPath": "/dev/tty.usbmodem59590354431",
           "UseExactPath": true,
           "BaudRate": 115200,
           "sharedSerialAPIMetadata": {
-            "$id": "312",
+            "$id": "315",
             "$type": "SharedBottangoSerialAPIMetaData, Assembly-CSharp",
             "signalRange": "Default_16",
             "driverSignalPrecision": "Default",
@@ -3114,9 +3137,9 @@
           }
         },
         "LiveOnLaunch": true,
-        "LastSuccessfulPort": "COM7",
+        "LastSuccessfulPort": "/dev/tty.usbmodem59590354431",
         "Effectors": {
-          "$id": "313",
+          "$id": "316",
           "$type": "System.Collections.Generic.List`1[[IHardwareEffector, Assembly-CSharp]], mscorlib",
           "$values": []
         },
@@ -3129,61 +3152,19 @@
         "parentControllerMetadata": null
       },
       {
-        "$id": "314",
+        "$id": "317",
         "$type": "SerialControllerMetaData, Assembly-CSharp",
-        "Name": "WIFI driver",
-        "communicationType": "NetworkedSockets",
-        "communicationTypeMetaData": {
-          "$id": "315",
-          "$type": "SerialCommunicationType_Networked_MetaData, Assembly-CSharp",
-          "networkPort": 59225,
-          "sharedSerialAPIMetadata": {
-            "$id": "316",
-            "$type": "SharedBottangoSerialAPIMetaData, Assembly-CSharp",
-            "signalRange": "Default_16",
-            "driverSignalPrecision": "Default",
-            "compressedIntMax": 8192,
-            "targetInstantHz": 30,
-            "MaxCurveLeadTimeMS": 1000,
-            "CurvesBufferSize": 3,
-            "curveStrategy": "Precached",
-            "allowInstant": true,
-            "offsetBySyncTime": true,
-            "includeJITTimeStamps": false,
-            "maxMessageLength": 100,
-            "allowSyncCurves": false,
-            "audioKeyframeType": "TriggerEvent"
-          }
-        },
-        "LiveOnLaunch": false,
-        "LastSuccessfulPort": "None",
-        "Effectors": {
-          "$id": "317",
-          "$type": "System.Collections.Generic.List`1[[IHardwareEffector, Assembly-CSharp]], mscorlib",
-          "$values": []
-        },
-        "relayIdentifier": "",
-        "relayCommunicationType": "None",
-        "relayMacAddress": {
-          "$type": "System.Byte[], mscorlib",
-          "$value": "AAAAAAAA"
-        },
-        "parentControllerMetadata": null
-      },
-      {
-        "$id": "318",
-        "$type": "SerialControllerMetaData, Assembly-CSharp",
-        "Name": "childDriver",
+        "Name": "childDriver-robot",
         "communicationType": "Relay",
         "communicationTypeMetaData": {
-          "$id": "319",
+          "$id": "318",
           "$type": "SerialCommunicationType_USBSerial_MetaData, Assembly-CSharp",
           "SearchQuery": "",
           "SearchExactPath": "",
           "UseExactPath": true,
           "BaudRate": 115200,
           "sharedSerialAPIMetadata": {
-            "$id": "320",
+            "$id": "319",
             "$type": "SharedBottangoSerialAPIMetaData, Assembly-CSharp",
             "signalRange": "Default_16",
             "driverSignalPrecision": "Default",
@@ -3203,7 +3184,7 @@
         "LiveOnLaunch": true,
         "LastSuccessfulPort": "",
         "Effectors": {
-          "$id": "321",
+          "$id": "320",
           "$type": "System.Collections.Generic.List`1[[IHardwareEffector, Assembly-CSharp]], mscorlib",
           "$values": [
             {
@@ -3224,33 +3205,33 @@
         "relayCommunicationType": "ESPNOW",
         "relayMacAddress": {
           "$type": "System.Byte[], mscorlib",
-          "$value": "CDryR0mg"
+          "$value": "CDryR0vk"
         },
         "parentControllerMetadata": {
-          "$ref": "310"
+          "$ref": "313"
         }
       }
     ]
   },
   "controlSchemes": {
-    "$id": "322",
+    "$id": "321",
     "$type": "System.Collections.Generic.List`1[[ControlScheme, Assembly-CSharp]], mscorlib",
     "$values": [
       {
-        "$id": "323",
+        "$id": "322",
         "$type": "ControlScheme, Assembly-CSharp",
         "name": "New Control Scheme",
         "curveFitError": 0.035,
         "controlMaps": {
-          "$id": "324",
+          "$id": "323",
           "$type": "System.Collections.Generic.List`1[[ILiveControlMap, Assembly-CSharp]], mscorlib",
           "$values": [
             {
-              "$id": "325",
+              "$id": "324",
               "$type": "ControlMap_Movement, Assembly-CSharp",
               "live": true,
               "controlAxisSerializedConfiguration": {
-                "$id": "326",
+                "$id": "325",
                 "$type": "DigitalButtomMovementControlAxis_SerializedConfiguration, Assembly-CSharp",
                 "controlType": "TwoButtonReturnToNeutral",
                 "min": 0.0,
@@ -3259,16 +3240,16 @@
                 "speed": 100.0
               },
               "inputProviders": {
-                "$id": "327",
+                "$id": "326",
                 "$type": "System.Collections.Generic.List`1[[IControlMapInputProvider, Assembly-CSharp]], mscorlib",
                 "$values": [
                   {
-                    "$id": "328",
+                    "$id": "327",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/upArrow"
                   },
                   {
-                    "$id": "329",
+                    "$id": "328",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/downArrow"
                   }
@@ -3279,11 +3260,11 @@
               }
             },
             {
-              "$id": "330",
+              "$id": "329",
               "$type": "ControlMap_Movement, Assembly-CSharp",
               "live": true,
               "controlAxisSerializedConfiguration": {
-                "$id": "331",
+                "$id": "330",
                 "$type": "DigitalButtomMovementControlAxis_SerializedConfiguration, Assembly-CSharp",
                 "controlType": "TwoButtonReturnToNeutral",
                 "min": 0.0,
@@ -3292,16 +3273,16 @@
                 "speed": 100.0
               },
               "inputProviders": {
-                "$id": "332",
+                "$id": "331",
                 "$type": "System.Collections.Generic.List`1[[IControlMapInputProvider, Assembly-CSharp]], mscorlib",
                 "$values": [
                   {
-                    "$id": "333",
+                    "$id": "332",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/upArrow"
                   },
                   {
-                    "$id": "334",
+                    "$id": "333",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/downArrow"
                   }
@@ -3322,20 +3303,20 @@
         "lastSelected": false
       },
       {
-        "$id": "335",
+        "$id": "334",
         "$type": "ControlScheme, Assembly-CSharp",
         "name": "New Control Scheme",
         "curveFitError": 0.035,
         "controlMaps": {
-          "$id": "336",
+          "$id": "335",
           "$type": "System.Collections.Generic.List`1[[ILiveControlMap, Assembly-CSharp]], mscorlib",
           "$values": [
             {
-              "$id": "337",
+              "$id": "336",
               "$type": "ControlMap_Movement, Assembly-CSharp",
               "live": false,
               "controlAxisSerializedConfiguration": {
-                "$id": "338",
+                "$id": "337",
                 "$type": "DigitalButtomMovementControlAxis_SerializedConfiguration, Assembly-CSharp",
                 "controlType": "TwoButtonIncremental",
                 "min": 0.0,
@@ -3344,16 +3325,16 @@
                 "speed": 40.0
               },
               "inputProviders": {
-                "$id": "339",
+                "$id": "338",
                 "$type": "System.Collections.Generic.List`1[[IControlMapInputProvider, Assembly-CSharp]], mscorlib",
                 "$values": [
                   {
-                    "$id": "340",
+                    "$id": "339",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/w"
                   },
                   {
-                    "$id": "341",
+                    "$id": "340",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/s"
                   }
@@ -3364,11 +3345,11 @@
               }
             },
             {
-              "$id": "342",
+              "$id": "341",
               "$type": "ControlMap_Movement, Assembly-CSharp",
               "live": false,
               "controlAxisSerializedConfiguration": {
-                "$id": "343",
+                "$id": "342",
                 "$type": "DigitalButtomMovementControlAxis_SerializedConfiguration, Assembly-CSharp",
                 "controlType": "TwoButtonIncremental",
                 "min": 0.0,
@@ -3377,16 +3358,16 @@
                 "speed": 40.0
               },
               "inputProviders": {
-                "$id": "344",
+                "$id": "343",
                 "$type": "System.Collections.Generic.List`1[[IControlMapInputProvider, Assembly-CSharp]], mscorlib",
                 "$values": [
                   {
-                    "$id": "345",
+                    "$id": "344",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/q"
                   },
                   {
-                    "$id": "346",
+                    "$id": "345",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/a"
                   }
@@ -3397,11 +3378,11 @@
               }
             },
             {
-              "$id": "347",
+              "$id": "346",
               "$type": "ControlMap_Movement, Assembly-CSharp",
               "live": false,
               "controlAxisSerializedConfiguration": {
-                "$id": "348",
+                "$id": "347",
                 "$type": "DigitalButtomMovementControlAxis_SerializedConfiguration, Assembly-CSharp",
                 "controlType": "TwoButtonIncremental",
                 "min": 0.0,
@@ -3410,16 +3391,16 @@
                 "speed": 40.0
               },
               "inputProviders": {
-                "$id": "349",
+                "$id": "348",
                 "$type": "System.Collections.Generic.List`1[[IControlMapInputProvider, Assembly-CSharp]], mscorlib",
                 "$values": [
                   {
-                    "$id": "350",
+                    "$id": "349",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/o"
                   },
                   {
-                    "$id": "351",
+                    "$id": "350",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/l"
                   }
@@ -3430,11 +3411,11 @@
               }
             },
             {
-              "$id": "352",
+              "$id": "351",
               "$type": "ControlMap_Movement, Assembly-CSharp",
               "live": false,
               "controlAxisSerializedConfiguration": {
-                "$id": "353",
+                "$id": "352",
                 "$type": "DigitalButtomMovementControlAxis_SerializedConfiguration, Assembly-CSharp",
                 "controlType": "TwoButtonIncremental",
                 "min": 0.0,
@@ -3443,16 +3424,16 @@
                 "speed": 40.0
               },
               "inputProviders": {
-                "$id": "354",
+                "$id": "353",
                 "$type": "System.Collections.Generic.List`1[[IControlMapInputProvider, Assembly-CSharp]], mscorlib",
                 "$values": [
                   {
-                    "$id": "355",
+                    "$id": "354",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/i"
                   },
                   {
-                    "$id": "356",
+                    "$id": "355",
                     "$type": "ControlMapInputProvider_InputSystem, Assembly-CSharp",
                     "binding": "<Keyboard>/k"
                   }
