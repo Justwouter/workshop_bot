@@ -6,8 +6,8 @@ The project was developed by [Daniel Simu](https://danielsimu.com), with funding
 Additional materials were sponsored by [DFRobot](https://www.dfrobot.com/),  [Fillamentum](https://fillamentum.com/) and [Tinytronics](https://www.tinytronics.nl/en/)
 
 
-https://github.com/user-attachments/assets/2d4096a1-6652-4d9d-a46d-a56debfdda75
 
+https://github.com/user-attachments/assets/d1673c57-b2f6-4ec9-994d-3f826fc23f9e
 
 
 
