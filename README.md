@@ -42,6 +42,7 @@ Make sure to update the child code with the mac address of the parent, and in Bo
 - The dongle can be any standard ESP32, I use a Pico-d4 with a usb plug connector mounted on it.
 - You can solder the electronics together on a perfboard, or fabricate the pcb.
 - You will need 2 small screws to hold the ESP(2x6mm works well), and 3 M3 nuts and M3x30mm bolts to close the case.
+- 16mm alluminium tubes are used for arms and legs, recommended sizes are 190mm and 290mm
 
 ![IMG_3868](https://github.com/user-attachments/assets/abd38016-ecba-4983-9508-b4a0b231a236)
 
