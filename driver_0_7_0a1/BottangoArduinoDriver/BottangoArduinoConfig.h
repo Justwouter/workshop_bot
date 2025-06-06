@@ -140,7 +140,7 @@ const char SD_AUDIO_FORMAT[] PROGMEM = ".wav        ";      // file format name 
 #define TXT_BUFFER_SIZE_ESPNOW 256                                // max num chars to store in the espnow recv and send buffers
 
 #ifdef RELAY_CHILD
-#define ESPNOW_PARENT_ADDRESS {0x90, 0x15, 0x06, 0xdb, 0x41, 0x7c} // mac address of parent
+#define ESPNOW_PARENT_ADDRESS {0xf0, 0x24, 0xf9, 0xb6, 0x60, 0x18} // mac address of parent
 #endif
 #endif
 
