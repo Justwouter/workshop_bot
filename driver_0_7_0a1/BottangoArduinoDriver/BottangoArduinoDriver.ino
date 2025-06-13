@@ -6,10 +6,10 @@
 
 #include "src/BottangoCore.h"
 #include "src/BasicCommands.h"
+
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <esp_wifi.h>
-
 
 // == Wouter's Stuff ==
 // Definitions
@@ -31,8 +31,8 @@ struct MotorData {
 };
 
 MotorData motors[2] = {
-  { "legLeft", 32 ,true},
-  { "legRight", 33 ,false}
+  { "legLeft", 32, true },
+  { "legRight", 33, false }
 };
 
 // Wifi Stuff
@@ -48,10 +48,17 @@ void readMacAddress() {
   }
 }
 
-void setupWiFi() {
+void disconnectWiFi() {
+  if (WiFi.status() == WL_CONNECTED) {
+    WiFi.disconnect();
+    Serial.println("Disconnected from WiFi");
+  } else {
+    Serial.println("WiFi is not connected");
+  }
+}
 
+void setupWiFi() {
   Serial.print("Connecting to WiFi");
-  WiFi.disconnect(true,true)
   WiFi.begin(ssid, password);
   readMacAddress();
   while (WiFi.status() != WL_CONNECTED) {
@@ -97,7 +104,6 @@ bool sendDataToBottango(MotorData data) {
   // delay(500);
 }
 
-
 void sendAllToBottango() {
   for (int i = 0; i < sizeof(motors) / sizeof(motors[0]); i++) {
     if (!sendDataToBottango(motors[i])) {
@@ -109,11 +115,18 @@ void sendAllToBottango() {
 void wifiLoop() {
   buttonState = digitalRead(middleButtonPin);
   if (buttonState == LOW && wifiMode == false) {
+    BottangoCore::effectorPool.clearAllCurves();
+    BottangoCore::effectorPool.deregisterAll();
+
+    BottangoCore::stop();
+
+    setupWiFi();
     Serial.println("engage wifi");
     wifiMode = true;
     Serial.println(wifiMode);
     delay(500);
   } else if (buttonState == LOW && wifiMode == true) {
+    esp_system_abort("Hello");
     Serial.println("stop wifi");
     wifiMode = false;
     Serial.println(wifiMode);
@@ -123,6 +136,9 @@ void wifiLoop() {
   if (wifiMode == true) {
     sendAllToBottango();
   }
+  if (wifiMode == false) {
+    BottangoCore::bottangoLoop();
+  }
 }
 
 // Servo Stuff
@@ -131,13 +147,11 @@ float normalizeServoValue(MotorData data) {
   float value = analogRead(data.feedbackPin);
   // normalize to 0-1 range by deviding trough the max petentiometer value
   value = value > 0 ? value / 4095 : 0;
-  if(data.inverted){
-    value = 1-value;
+  if (data.inverted) {
+    value = 1 - value;
   }
   return value;
 }
-
-
 
 void clearScrean() {
   for (int i = 0; i < 100; i++) {
@@ -148,16 +162,10 @@ void clearScrean() {
 void printRawServo() {
   // clearScrean();
   for (int i = 0; i < sizeof(motors) / sizeof(motors[0]); i++) {
-      Serial.print(String(analogRead(motors[i].feedbackPin)) + " ");
+    Serial.print(String(analogRead(motors[i].feedbackPin)) + " ");
   }
   Serial.println("");
-
 }
-
-
-
-
-
 
 // == Daniel's Stuff ==
 const int ledPin = 21;
@@ -210,28 +218,9 @@ void printInfo() {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void setup() {
   Serial.begin(115200);
-  setupWiFi();
+  // setupWiFi();
 
   pinMode(34, INPUT);
   pinMode(36, INPUT);  // middle button
@@ -244,5 +233,5 @@ void loop() {
   wifiLoop();
   printInfo();
   // printRawServo();
-  BottangoCore::bottangoLoop();
+  // BottangoCore::bottangoLoop();
 }
