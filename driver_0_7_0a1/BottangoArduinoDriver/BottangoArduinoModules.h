@@ -45,8 +45,8 @@
 // !! RELAY !!
 
 // (select only 1, or none for default behavior)
-#define RELAY_PARENT                                // uncomment this line to act as a relay parent, that will pass commands to child controllers
-// #define RELAY_CHILD                                 // uncomment this line to act as a relay child, that will recieve commands to from a parent controller
+// #define RELAY_PARENT                                // uncomment this line to act as a relay parent, that will pass commands to child controllers
+#define RELAY_CHILD                                 // uncomment this line to act as a relay child, that will recieve commands to from a parent controller
 
 // relay Comms type
 // (select only 1 if relay parent or child)
